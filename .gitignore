@@ -1,0 +1,49 @@
+# Ignore the .idea directory (for PyCharm/IntelliJ)
+.idea/
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local configuration files
+#config.py
+
+# Ignore logger configuration
+#logger_config.py
+
+# Ignore test results, reports, and other output files
+report/
+
+# Ignore Python virtual environment directories
+venv/
+env/
+.venv/
+
+# Ignore test files
+tests/__pycache__/
+
+# Ignore pytest configuration file
+#pytest.ini
+
+# Ignore environment-specific files
+*.env
+.env
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# If you are using requirements.txt for dependencies, this should be tracked
+# but if you want to ignore generated dependencies or lock files, you could do this:
+# requirements.txt.lock (if applicable)
+
+# Ignore common IDE/editor-specific files
+.vscode/
+*.swp
+*~
+
+# Ignore any temporary files
+*.log
+*.tmp
