@@ -1,5 +1,4 @@
-import requests
-from requests import Response
+from requests import Response, request
 from logger_config import setup_logger
 logger = setup_logger()
 
@@ -9,7 +8,7 @@ class Api:
     @staticmethod
     def request(method: str, url: str, **kwargs) -> Response:
         """
-        Request method
+        The method is a wrapper for the standard request from requests lib
         method: method for the new Request object: GET, OPTIONS, HEAD, POST, PUT, PATCH, or DELETE. # noqa
         url – URL for the new Request object.
         **kwargs:
@@ -19,7 +18,7 @@ class Api:
         """
 
         logger.info(f"{method} request by URL: {url}")
-        response = requests.request(method, url, **kwargs)
+        response = request(method, url, **kwargs)
         logger.info(f"Response Status: {response.status_code}")
         logger.info(f"Response Body: {response.text}" if response.text else "Response Body: Empty")
         return response
